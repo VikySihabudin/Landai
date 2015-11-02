@@ -1,0 +1,433 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpbootstrap.master.cs" Inherits="MasterPages_mpbootstrap" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <script src="../Javascript/angka.js" type="text/javascript"></script>
+
+    <%--css dhtmlx--%>
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/dhtmlxtabbar.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/dhtmlxcalendar.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxgrid/codebase/dhtmlxgrid.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxgrid_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxaccordion_dhx_blue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/skins/dhtmlxtoolbar_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxgrid_pgn_bricks.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxCombo/codebase/dhtmlxcombo.css" />
+    <%--<link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxchart/codebase/dhtmlxchart.css" />--%>
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/skins/dhtmlxlayout_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/skins/dhtmlxwindows_dhx_skyblue.css" />
+
+    <%--incude tanggal--%>
+    <script src="../CSS/bootstrap/CSS/jquery.min.js" type="text/javascript"></script>
+    <script src="../CSS/bootstrap/CSS/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="../CSS/bootstrap/CSS/jquery-ui.css" rel="stylesheet" type="text/CSS" />
+
+    <%--akhir--%>
+
+
+
+    <style type="text/CSS">
+        .tdinfo1
+        {
+        	width:45%; background-color:lightgrey;
+        	cellpadding:3px;
+        }
+        .tdinfo2
+        {
+        	cellpadding:3px;
+        	font-size: small;
+        }
+    </style>
+
+    <%--<script type="text/jscript" language="javascript" src="../Adaro/js/jquery/jquery.js"> </script>--%>
+    <%--<script  src="../JavaScript/lookup.js" type="text/javascript"></script>--%>
+    <script  src="../JavaScript/lookup.js" type="text/javascript"></script>
+<%--    <script  src="../JavaScript/commons.js" type="text/javascript"></script>
+--%>
+    <script src="../JavaScript/codebase/dhtmlxcommon.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar_start.js" type="text/javascript"></script>
+<%--    <script src="../JavaScript/dhtmlxSuite/dhtmlxCalendar/codebase/dhtmlxcalendar.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxAccordion/codebase/dhtmlxaccordion.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxAccordion/codebase/dhtmlxcontainer.js"type="text/javascript"></script>--%>
+    <script src="../JavaScript/codebase/dhtmlxgrid.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/dhtmlxgridcell.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+<%--    <script src="../JavaScript/dhtmlxSuite/dhtmlxTree/codebase/dhtmlxtree.js" type="text/javascript" ></script>
+--%>    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_srnd.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_pgn.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/dhtmlxToolbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_group2.js" type="text/javascript"></script>
+<%--    <script src="../JavaScript/dhtmlxSuite/dhtmlxchart/codebase/dhtmlxchart.js" type="text/javascript"></script>
+--%>    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/dhtmlxcombo.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_nxml.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/ext/dhtmlxcombo_extra.js"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/sources/patterns/dhtmlxlayout_pattern4g.js" type="text/javascript"></script>
+
+    <script type="text/javascript">        djConfig = { parseOnLoad: true }</script>
+    <script type="text/javascript" language="javascript">
+        try {
+
+        }
+        catch (e) {
+            alert(e.description);
+        }
+    </script>
+    <%--batas--%>
+
+    <%--css bootstrap dan hr--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../CSS/bootstrap/CSS/Bootstrap.min2.css" rel="stylesheet" type="text/CSS" />
+    <link href="../CSS/bootstrap/CSS/desain_hr.css" rel="stylesheet" type="text/CSS" />
+
+   
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" />
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../Pages/Home.aspx">ADARO</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">   
+
+        <%if (TopPriority.ToString().Equals("1") || FiveYears.ToString().Equals("1") || LOM.ToString().Equals("1") || Other.ToString().Equals("1") || groups.ToString().Equals("1"))
+          { %>          
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Land Map<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu"> 
+            
+            <%if (TopPriority.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Map/Top.aspx">Top Priority</a></li>
+            <%}%>             
+
+            <%if (FiveYears.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Map/FiveYear.aspx">Five Years</a></li>
+            <%}%> 
+
+            <%if (LOM.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Map/LOM.aspx">LOM</a></li>
+            <%}%>
+                        
+            <%if (Other.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Map/Other.aspx">Other</a></li>
+            <%}%>
+
+                  </ul>
+            </li>
+
+           <%}%> 
+
+
+        <%if (praregistrasi.ToString().Equals("1") || PengecekanLapangan.ToString().Equals("1") || Registrasi.ToString().Equals("1")
+              || PengukuranT0.ToString().Equals("1") || Negosiasi.ToString().Equals("1") || Verifikasi.ToString().Equals("1") ||
+              Pemberkasan.ToString().Equals("1") || Pembayaran.ToString().Equals("1") || Finalisasi.ToString().Equals("1") ||
+              SerahTerimaBerkas.ToString().Equals("1") || groups.ToString().Equals("1"))
+          { %>
+           
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Land Compensation <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu"> 
+                    <%--<li><a href="../Pages/MasterIdentitasList.aspx">Master Identitas</a></li>--%> 
+
+            <%if (praregistrasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %>                                       
+                    <li><a href="../Pages/PraRegistrasiList.aspx">Pra Registrasi</a></li>
+            <%}%>
+
+            <%if (PengecekanLapangan.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %>
+                    <li><a href="../Pages/PengecekanLapanganList.aspx">Pengecekan Lapangan</a></li>
+            <%}%>
+
+            <%if (Registrasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/RegistrasiList.aspx">Registrasi</a></li>
+            <%}%> 
+
+            <%if (PengukuranT0.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/PengukuranList.aspx">Pengukuran T0</a></li>
+            <%}%>
+
+            <%if (Negosiasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/NegosiasiList.aspx">Negosiasi</a></li>
+            <%}%>
+
+            <%if (Verifikasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/VisumList.aspx">Verifikasi</a></li>
+            <%}%>
+
+            <%if (Pemberkasan.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/PemberkasanSatuList.aspx">Pemberkasan</a></li>
+            <%}%>
+
+            <%if (Pembayaran.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/PembayaranList.aspx">Pembayaran</a></li>
+            <%}%>
+
+            <%if (Finalisasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+              { %> 
+                    <li><a href="../Pages/PemberkasanDuaList.aspx">Finalisasi</a></li>
+            <%}%>
+
+            <%if (SerahTerimaBerkas.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %> 
+                    <li><a href="../Pages/SerahTerimaBerkas.aspx">Serah Terima Berkas</a></li>
+            <%}%>
+
+                  </ul>
+            </li>
+
+           <%}%> 
+
+
+       
+
+        <%if (GroupManagement.ToString().Equals("1") || UserManagement.ToString().Equals("1") || MasterIdentitas.ToString().Equals("1")
+              || MasterPerusahaan.ToString().Equals("1") || MasterCodes.ToString().Equals("1") || MasterMenu.ToString().Equals("1") ||
+               groups.ToString().Equals("1"))
+          { %>
+      
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin Tools <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+
+            <%if (GroupManagement.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/GroupManagementList.aspx">Group Management</a></li>
+            <%}%>
+            
+            <%if (UserManagement.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>              
+                    <li><a href="../Pages/UserManagementList.aspx">User Management</a></li>
+            <%}%>
+
+            <%if (MasterIdentitas.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/MasterIdentitasList.aspx">Master Identitas</a></li>
+            <%}%> 
+
+            <%if (MasterPerusahaan.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/MasterPerusahaanList.aspx">Master Perusahaan</a></li>
+            <%}%>
+
+            <%if (MasterCodes.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/CodesModul.aspx">Master Codes</a></li> 
+            <%}%>
+
+            <%if (MasterMenu.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/MasterMenu.aspx">Master Menu</a></li>  
+            <%}%>                   
+                  </ul>
+            </li>
+
+            <%}%> 
+
+
+
+        <%if (ReportPraRegistrasi.ToString().Equals("1") || ReportPengecekanLapangan.ToString().Equals("1") || ReportRegistrasi.ToString().Equals("1")
+              || ReportPengukuranT0.ToString().Equals("1") || ReportNegosiasi.ToString().Equals("1") || ReportVerifikasi.ToString().Equals("1") ||
+               ReportFinalisasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+          { %>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Report <span class="caret"></span></a>
+                <ul class="dropdown-menu multi-level" role="menu">
+
+            
+             <%if (ReportPraRegistrasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>                   
+                    <li><a href="../Pages/R_PraRegistrasi.aspx">Report Praregistrasi</a></li>
+            <%}%> 
+            
+            <%if (ReportPengecekanLapangan.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li><a href="../Pages/R_PengecekanLapangan.aspx">Report Pengecekan Lapangan</a></li>
+            <%}%>             
+            
+            <%if (ReportRegistrasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li class="dropdown-submenu"><a href="#">Report Registrasi</a>
+                        <ul class="dropdown-menu">
+					      <li><a tabindex="-1" href="../Pages/R_Registrasi.aspx">Registrasi</a></li>
+					      <li><a href="../Pages/R_Registrasi_detail.aspx">Registrasi Detail</a></li>
+					    </ul>
+                    </li>  
+            <%}%> 
+
+            <%if (ReportPengukuranT0.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>                     
+                    <li><a href="../Pages/R_Pengukuran.aspx">Report Pengukuran T0</a></li>
+            <%}%>             
+            
+            <%if (ReportNegosiasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li class="dropdown-submenu"><a href="#">Report Negosiasi</a>
+                        <ul class="dropdown-menu">
+					      <li><a tabindex="-1" href="../Pages/R_PraNegosiasi.aspx">Negosiasi</a></li>
+					      <li><a href="../Pages/R_Negosiasi.aspx">Negosiasi Detail</a></li>
+					    </ul>
+                    </li>   
+            <%}%> 
+
+            <%if (ReportVerifikasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li class="dropdown-submenu"><a href="#">Report Verifikasi</a>
+                        <ul class="dropdown-menu">
+					      <li><a tabindex="-1" href="../Pages/R_Visum.aspx">Visum</a></li>
+					      <li><a href="../Pages/R_Visum_detail.aspx">Visum Detail</a></li>
+					    </ul>
+                    </li>
+            <%}%> 
+
+            <%if (ReportFinalisasi.ToString().Equals("1") || groups.ToString().Equals("1"))
+            { %>
+                    <li class="dropdown-submenu"><a href="#">Report Finalisasi</a>
+                        <ul class="dropdown-menu">
+					      <li><a tabindex="-1" href="../Pages/R_LCR.aspx">Finalisasi</a></li>
+					      <li><a href="../Pages/R_LCR_detail.aspx">Finalisasi Detail</a></li>
+					    </ul>
+                    </li>       
+            <%}%>                     
+                                     
+                </ul>
+            </li>  
+            
+            <%}%>  
+                               
+            <li><a href="../Logout.aspx">Logout</a></li>            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->    
+    <script src="../CSS/bootstrap/js/jquery.min.js" type="text/javascript"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <%--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>--%>
+
+    <script src="../CSS/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+
+    <%--script google api untuk datepicker--%>
+    <script src="../CSS/bootstrap/js/1.6/jquery.min.js" type="text/javascript"></script>
+    <link href="../CSS/bootstrap/js/1.8/jquery-ui.css" rel="stylesheet" type="text/CSS" />
+    <script src="../CSS/bootstrap/js/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <%--akhir--%>
+
+
+    <%--<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>--%>
+
+    <form role="form" class="form-horizontal" action="#" id="form1" runat="server">
+        <div id="backLookup" style="background-image: url(../img/backGroundGelap.png); width: 0px; height: 0px; visibility: visible; position: relative; z-index: -1;"></div>
+        <div id="lookup" style="width: 0px; height: 0px; visibility: hidden; 
+            -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border: 1px solid #000;">
+            <div id="judul" style="background-color: #ababab; vertical-align: middle; position: relative; height: 25px;
+                -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px;
+                margin-left: 0px; padding-left: 10px; padding-right: -10px;">
+            </div>
+                <div id="contentLookup" style="vertical-align: middle; position: relative; height: 265px; margin-top: 5px; margin-left: 5px; margin-right: 5px;">
+                    <div style="padding-top: 5px; padding-left: 5px;">
+                        <input type='text' id='lookupKey' value='' onkeypress="enterPressed(event,'lookupSearch(document.getElementById(\'lookupKey\').value);');" />&nbsp;&nbsp;
+                        <input type='button' onclick="lookupSearch(document.getElementById('lookupKey').value);" value='Cari' />
+                        &nbsp;&nbsp;<input type="button" value="Tutup" onclick="hideLookup('lookup');" />
+                        <a href="MasterIdentitasForm.aspx?param1=I">
+                        <input type="button" value="Tambah Baru"/>
+                        </a>
+                       
+                    </div>
+                    <div style=" width:100%; height:228px;">
+                    <div id="gridLookup" style="width:100%;height:100%;background-color:white;"></div>
+                    </div>
+                </div>
+        </div>
+        <div id="loadDiv" style="width: 0px; height: 0px; visibility:hidden;">
+            <img src="../img/circle.gif" alt="Loading..." style="position:relative;" />
+            <!--img src="../img/circle.gif" alt="Loading..." style="position:relative;" /-->
+        </div>
+
+        <%--utk modul prareg dan registrasi--%>
+
+        <div id="backLookup2" style="background-image: url(../img/backGroundGelap.png); width: 0px; height: 0px; visibility: visible; position: relative; z-index: -1;"></div>
+        <div id="lookup2" style="width: 0px; height: 0px; visibility: hidden; 
+            -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border: 1px solid #000;">
+            <div id="judul2" style="background-color: red; vertical-align: middle; position: relative; height: 25px;
+                -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px;
+                margin-left: 0px; padding-left: 10px; padding-right: -10px;">
+            </div>
+                <div id="contentLookup2" style="vertical-align: middle; position: relative; height: 265px; margin-top: 5px; margin-left: 5px; margin-right: 5px;">
+                    <div style="padding-top: 5px; padding-left: 5px;">
+                        <input type='text' id='lookupKey2' value='' onkeypress="enterPressed(event,'lookupSearch2(document.getElementById(\'lookupKey2\').value);');" />&nbsp;&nbsp;
+                        <input type='button' onclick="lookupSearch2(document.getElementById('lookupKey2').value);" value='Cari' />
+                        &nbsp;&nbsp;<input type="button" value="Tutup" onclick="hideLookup('lookup2');" />
+                    </div>
+                    
+                    <div style=" width:100%; height:228px;">
+                    <div id="gridLookup2" style="width:100%;height:100%;background-color:white;"></div>
+                    </div>
+
+                </div>
+        </div>
+        <div id="loadDiv2" style="width: 0px; height: 0px; visibility:hidden;">
+            <img src="../img/circle.gif" alt="Loading..." style="position:relative;" />
+            <!--img src="../img/circle.gif" alt="Loading..." style="position:relative;" /-->
+        </div>
+
+
+    
+            <div class="container">	
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>

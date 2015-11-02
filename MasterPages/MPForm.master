@@ -1,0 +1,291 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPForm.master.cs" Inherits="MasterPages_MPForm" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <script src="../Javascript/angka.js" type="text/javascript"></script>
+
+    <%--css dhtmlx--%>
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/dhtmlxtabbar.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/dhtmlxcalendar.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxgrid/codebase/dhtmlxgrid.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxgrid_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxaccordion_dhx_blue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/skins/dhtmlxtoolbar_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/codebase/skins/dhtmlxgrid_pgn_bricks.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxsuite/dhtmlxCombo/codebase/dhtmlxcombo.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/skins/dhtmlxlayout_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.css" />
+    <link rel="stylesheet" type="text/CSS" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/skins/dhtmlxwindows_dhx_skyblue.css" />
+
+    <%--incude tanggal--%>
+    <script src="../CSS/bootstrap/CSS/jquery.min.js" type="text/javascript"></script>
+    <script src="../CSS/bootstrap/CSS/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="../CSS/bootstrap/CSS/jquery-ui.css" rel="stylesheet" type="text/CSS" />
+
+    <%--akhir--%>
+
+
+
+    <style type="text/CSS">
+        .tdinfo1
+        {
+        	width:45%; background-color:lightgrey;
+        	cellpadding:3px;
+        }
+        .tdinfo2
+        {
+        	cellpadding:3px;
+        	font-size: small;
+        }
+    </style>
+
+    <script  src="../JavaScript/lookup.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/codebase/dhtmlxcommon.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar_start.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/dhtmlxgrid.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/dhtmlxgridcell.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_srnd.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_pgn.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/dhtmlxToolbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_group2.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/dhtmlxcombo.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_nxml.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/ext/dhtmlxcombo_extra.js"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/sources/patterns/dhtmlxlayout_pattern4g.js" type="text/javascript"></script>
+
+    <script type="text/javascript">        djConfig = { parseOnLoad: true }</script>
+    <script type="text/javascript" language="javascript">
+        try {
+
+        }
+        catch (e) {
+            alert(e.description);
+        }
+    </script>
+    <%--batas--%>
+
+    <%--css bootstrap dan hr--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../CSS/bootstrap/CSS/Bootstrap.min2.css" rel="stylesheet" type="text/CSS" />
+    <link href="../CSS/bootstrap/CSS/desain_hr.css" rel="stylesheet" type="text/CSS" />
+
+   
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" />
+    <div class="container"></div>
+    </nav>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->    
+    <script src="../CSS/bootstrap/js/jquery.min.js" type="text/javascript"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+
+    <script src="../CSS/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+
+    <%--script google api untuk datepicker--%>
+    <script src="../CSS/bootstrap/js/1.6/jquery.min.js" type="text/javascript"></script>
+    <link href="../CSS/bootstrap/js/1.8/jquery-ui.css" rel="stylesheet" type="text/CSS" />
+    <script src="../CSS/bootstrap/js/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <%--akhir--%>
+
+
+
+    <form role="form" class="form-horizontal" action="#" id="form1" runat="server">
+        <div id="backLookup" style="background-image: url(../img/backGroundGelap.png); width: 0px; height: 0px; visibility: visible; position: relative; z-index: -1;"></div>
+        <div id="lookup" style="width: 0px; height: 0px; visibility: hidden; 
+            -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border: 1px solid #000;">
+            <div id="judul" style="background-color: #ababab; vertical-align: middle; position: relative; height: 25px;
+                -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px;
+                margin-left: 0px; padding-left: 10px; padding-right: -10px;">
+            </div>
+
+            
+
+                <div id="contentLookup" style="vertical-align: middle; position: relative; height: 265px; margin-top: 5px; margin-left: 5px; margin-right: 5px;">
+                    <div style="padding-top: 5px; padding-left: 5px;">
+                        <input type='text' id='lookupKey' value='' onkeypress="enterPressed(event,'lookupSearch(document.getElementById(\'lookupKey\').value);');" />&nbsp;&nbsp;
+                        <input type='button' onclick="lookupSearch(document.getElementById('lookupKey').value);" value='Cari' />
+                        &nbsp;&nbsp;<input type="button" value="Tutup" onclick="hideLookup('lookup');" />
+                        <a href="MasterIdentitasForm.aspx?param1=I"><input type="button" value="Tambah Baru" /></a>
+                    </div>
+
+                    <div style=" width:100%; height:220px;">
+                    <div id="gridLookup" style="width:100%;height:100%;background-color:white;"></div>
+                    </div>
+                </div>
+
+           
+
+        </div>
+        <div id="loadDiv" style="width: 0px; height: 0px; visibility:hidden;">
+            <img src="../img/circle.gif" alt="Loading..." style="position:relative;" />
+
+        </div>
+
+        <%--utk modul prareg dan registrasi--%>
+
+        <div id="backLookup2" style="background-image: url(../img/backGroundGelap.png); width: 0px; height: 0px; visibility: visible; position: relative; z-index: -1;"></div>
+        <div id="lookup2" style="width: 0px; height: 0px; visibility: hidden; 
+            -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border: 1px solid #000;">
+            <div id="judul2" style="background-color: red; vertical-align: middle; position: relative; height: 25px;
+                -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px;
+                margin-left: 0px; padding-left: 10px; padding-right: -10px;">
+            </div>
+                <div id="contentLookup2" style="vertical-align: middle; position: relative; height: 265px; margin-top: 5px; margin-left: 5px; margin-right: 5px;">
+                    <div style="padding-top: 5px; padding-left: 5px;">
+                        <input type='text' id='lookupKey2' value='' onkeypress="enterPressed(event,'lookupSearch2(document.getElementById(\'lookupKey2\').value);');" />&nbsp;&nbsp;
+                        <input type='button' onclick="lookupSearch2(document.getElementById('lookupKey2').value);" value='Cari' />
+                        &nbsp;&nbsp;<input type="button" value="Tutup" onclick="hideLookup('lookup2');" />
+                    </div>
+                    <div id="gridLookup2" style="width:100%;height:228px;background-color:grey;"></div>
+                </div>
+        </div>
+        <div id="loadDiv2" style="width: 0px; height: 0px; visibility:hidden;">
+            <img src="../img/circle.gif" alt="Loading..." style="position:relative;" />
+            <!--img src="../img/circle.gif" alt="Loading..." style="position:relative;" /-->
+        </div>
+
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    
+            <div class="container">	
+
+        
+                </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <%--Awal Style Ambil Photo--%>
+
+    <link rel="stylesheet" type="text/css" href="../WebCam/css/Master.css" />
+    <style type="text/css">
+        #webcam, #canvas
+        {
+            width: 272px;
+            border: 1px solid #ccc;
+            background: #eee;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #webcam
+        {
+            position: relative;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+            #webcam > span
+            {
+                z-index: 2;
+                position: absolute;
+                color: #eee;
+                font-size: 10px;
+                bottom: -16px;
+                left: 152px;
+            }
+
+            #webcam > img
+            {
+                z-index: 1;
+                position: absolute;
+                border: 0px none;
+                padding: 0px;
+                bottom: -40px;
+                left: 89px;
+            }
+
+            #webcam > div
+            {
+                border: 1px solid #ccc;
+                position: absolute;
+                right: -90px;
+                padding: 5px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            #webcam a
+            {
+                background: #fff;
+                font-weight: bold;
+            }
+
+                #webcam a > img
+                {
+                    border: 0px none;
+                }
+
+        #canvas
+        {
+            border: 1px solid #ccc;
+            background: #eee;
+        }
+
+        #flash
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 5000;
+            width: 100%;
+            height: 500px;
+            background-color: #c00;
+            display: none;
+        }
+
+        object
+        {
+            display: block; /* HTML5 fix */
+            position: relative;
+            z-index: 1000;
+        }
+    </style>
+
+        <script language="javascript" type="text/javascript">
+            function clearText(field) {
+                if (field.defaultValue == field.value) field.value = '';
+                else if (field.value == '') field.value = field.defaultValue;
+            }
+    </script>
+    <%--<link href="../css/Master.css" rel="stylesheet" type="text/css" />--%>
+
+<%--    <script src="../WebCam/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>--%>
+
+    <%--<script src="../WebCam/Scripts/jquery.webcam.js" type="text/javascript"></script>--%>
+
+<%--Akhir Style Ambil Photo--%>
+
+
+</body>
+</html>

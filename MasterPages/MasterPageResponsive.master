@@ -1,0 +1,343 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageResponsive.master.cs" Inherits="MasterPages_MasterPageResponsive" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Adaro Application</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     <%--script css dan javascript adaro--%>
+    <link rel="stylesheet" type="text/css" href="../JavaScript/codebase/dhtmlxtabbar.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/codebase/dhtmlxcalendar.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxsuite/dhtmlxgrid/codebase/dhtmlxgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/codebase/skins/dhtmlxgrid_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/codebase/skins/dhtmlxaccordion_dhx_blue.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/skins/dhtmlxtoolbar_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/codebase/skins/dhtmlxgrid_pgn_bricks.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxsuite/dhtmlxCombo/codebase/dhtmlxcombo.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxSuite/dhtmlxchart/codebase/dhtmlxchart.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/skins/dhtmlxlayout_dhx_skyblue.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.css" />
+    <link rel="stylesheet" type="text/css" href="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/skins/dhtmlxwindows_dhx_skyblue.css" />
+
+    <style type="text/css">
+        .tdinfo1
+        {
+        	width:45%; background-color:lightgrey;
+        	cellpadding:3px;
+        }
+        .tdinfo2
+        {
+        	cellpadding:3px;
+        	font-size: small;
+        }
+    </style>
+    <script type="text/jscript" language="javascript" src="../Adaro/js/jquery/jquery.js"> </script>
+    <script  src="../JavaScript/lookup.js" type="text/javascript"></script>
+    <script  src="../JavaScript/commons.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/codebase/dhtmlxcommon.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTabbar/codebase/dhtmlxtabbar_start.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCalendar/codebase/dhtmlxcalendar.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxAccordion/codebase/dhtmlxaccordion.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxAccordion/codebase/dhtmlxcontainer.js"type="text/javascript"></script>
+    <script src="../JavaScript/codebase/dhtmlxgrid.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/dhtmlxgridcell.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxlayout.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxTree/codebase/dhtmlxtree.js" type="text/javascript" ></script>
+    <script src="../JavaScript/codebase/excells/dhtmlxgrid_excell_link.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_srnd.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_pgn.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxsuite/dhtmlxtoolbar/codebase/dhtmlxToolbar.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_group2.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxchart/codebase/dhtmlxchart.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/dhtmlxcombo.js" type="text/javascript"></script>
+    <script src="../JavaScript/codebase/ext/dhtmlxgrid_nxml.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxwindows.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxWindows/codebase/dhtmlxcontainer.js" type="text/javascript"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxCombo/codebase/ext/dhtmlxcombo_extra.js"></script>
+    <script src="../JavaScript/dhtmlxSuite/dhtmlxLayout/sources/patterns/dhtmlxlayout_pattern4g.js" type="text/javascript"></script>
+
+    <script type="text/javascript">        djConfig = { parseOnLoad: true }</script>
+    <script type="text/javascript" language="javascript">
+        try {
+
+        }
+        catch (e) {
+            alert(e.description);
+        }
+    </script>
+
+    <%--akhir script css dan javascript adaro--%>
+
+     <%--include responsive--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css' />
+    
+    <link href="../Css/bootstrap/css/menu.css" rel="stylesheet" type="text/css" />
+
+    <link href="../Css/bootstrap/css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="../Css/bootstrap/js/jquery.min.js" type="text/javascript"></script>
+
+    <!-- responsive -->
+    <script src="../Css/bootstrap/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <!-- akhir responsive -->
+    
+    
+
+    <!--start slider -->
+    <link href="../Css/bootstrap/css/fwslider.css" rel="stylesheet" type="text/css" />
+    <script src="../Css/bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../Css/bootstrap/js/css3-mediaqueries.js" type="text/javascript"></script>
+    <script src="../Css/bootstrap/js/fwslider.js" type="text/javascript"></script>
+    <!--end slider -->
+    
+   <!---strat-date-piker---->
+
+    <link href="../Css/bootstrap/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="../Css/bootstrap/js/jquery-ui.js" type="text/javascript"></script>
+		      <script>
+		          $(function () {
+		              $("#datepicker,#datepicker1").datepicker();
+		          });
+		      </script>
+    <!---/End-date-piker---->
+
+    <%--<link type="text/css" rel="stylesheet" href="css/JFGrid.css" />--%>
+
+    <link href="../Css/bootstrap/css/JFFormStyle-1.css" rel="stylesheet" type="text/css" />
+    <script src="../Css/bootstrap/js/JFCore.js" type="text/javascript"></script>
+    <script src="../Css/bootstrap/js/JFForms.js" type="text/javascript"></script>
+
+	<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+	<script type="text/javascript">
+	    (function () {
+	        JC.init({
+	            domainKey: ''
+	        });
+	    })();
+	</script>
+    <!--nav-->
+    <script type="text/javascript">
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+
+    <!--chart -->
+    
+    <script src="../Css/bootstrap/js/canvasjs.min.js" type="text/javascript"></script>
+    <script src="../Css/bootstrap/js/jquery.canvasjs.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        window.onload = function bar() {
+            var chartbar = new CanvasJS.Chart("chartbar", {
+                title: {
+                    text: "Laporan Total Data Yang Masuk ke Dalam Sistem "
+                },
+                data: [//array of dataSeries              
+        { //dataSeries object
+
+        /*** Change type "column" to "bar", "area", "line" or "pie"***/
+        type: "column",
+        dataPoints: [
+         { label: "Pra Registrasi", y: 18 },
+         { label: "Registrasi", y: 29 },
+         { label: "Pengukuran", y: 70 },
+		 { label: "Negosiasi", y: 18 },
+         { label: "Pemberkasan I", y: 29 },
+         { label: "Pembayaran", y: 32 },
+		 { label: "Pemberkasan II", y: 18 },
+	     { label: "Verifikasi", y: 60 }
+         ]
+    }
+       ]
+            });
+            chartbar.render();
+
+            var chartpie = new CanvasJS.Chart("chartpie",
+	{
+	    title: {
+	        text: "Persentase Total Pra Registrasi Berdasarkan Jenis Pekerjaan",
+	        fontFamily: "arial black"
+	    },
+	    animationEnabled: true,
+	    legend: {
+	        verticalAlign: "bottom",
+	        horizontalAlign: "center"
+	    },
+	    theme: "theme1",
+	    data: [
+		{
+		    type: "pie",
+		    indexLabelFontFamily: "Garamond",
+		    indexLabelFontSize: 20,
+		    indexLabelFontWeight: "bold",
+		    startAngle: 0,
+		    indexLabelFontColor: "MistyRose",
+		    indexLabelLineColor: "darkgrey",
+		    indexLabelPlacement: "inside",
+		    toolTipContent: "{name}: {y}%",
+		    showInLegend: true,
+		    indexLabel: "#percent%",
+		    dataPoints: [
+				{ y: 25, name: "PNS", legendMarkerType: "triangle" },
+				{ y: 10, name: "TNI / POLRI", legendMarkerType: "square" },
+				{ y: 50, name: "KARYAWAN", legendMarkerType: "square" },
+				{ y: 15, name: "WIRASWASTA", legendMarkerType: "circle" }
+			]
+		}
+		]
+	});
+            chartpie.render();
+
+
+
+        }  
+  </script>
+  
+<script type="text/javascript">
+    spline()
+    $(function spline() {
+
+        //Better to construct options first and then pass it as a parameter
+        var options = {
+            exportEnabled: true,
+            animationEnabled: true,
+            title: {
+                text: "Laporan Pengukuran"
+            },
+            data: [
+		{
+		    type: "splineArea", //change it to line, area, bar, pie, etc
+		    dataPoints: [
+				{ y: 10 },
+				{ y: 6 },
+				{ y: 14 },
+				{ y: 12 },
+				{ y: 19 },
+				{ y: 14 },
+				{ y: 26 },
+				{ y: 10 },
+				{ y: 22 }
+			]
+		}
+		]
+        };
+
+        $("#chartContainer").CanvasJSChart(options);
+    });
+</script>
+
+
+
+
+</head>
+<body>
+
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="../Pages/Home.aspx"><img src="../img/logo.png" alt="Adaro" width="80px" height="50px" /></a>
+		</div>				
+		<div class="h_right">
+			<div id="menu-wrap">
+			<ul class="menu">            
+				<li><a href="#">Land Compensation</a>
+					<ul>
+                        <li><a href="../Pages/MasterIdentitas.aspx">Master Identitas</a></li>
+				        <li><a href="../Pages/1_PraRegistrasi.aspx">Pra Registrasi</a></li>
+                        <li><a href="../Pages/PengecekanLapangan.aspx">Pengecekan Lapangan</a></li>
+                        <li><a href="../Pages/Registrasi.aspx">Registrasi</a></li>
+                        <li><a href="../Pages/Pengukuran.aspx">Pengukuran T0</a></li>
+                        <li><a href="../Pages/Negosiasi.aspx">Negosiasi</a></li>
+                        <li><a href="../Pages/Visum.aspx">Verifikasi</a></li>
+                        <li><a href="../Pages/PemberkasanSatu.aspx">Pemberkasan</a></li>
+                        <li><a href="../Pages/Pembayaran.aspx">Pembayaran</a></li>
+                        <li><a href="../Pages/PemberkasanDua.aspx">Final</a></li>                        
+					</ul>
+				</li>
+				<li><a href="#">Land Secure</a></li>
+				<li><a href="#">Land Inventory</a></li>
+				<li><a href="#">Admin Tools</a>
+					<ul>
+						<li><a href="#">User Management</a></li>
+						<li><a href="#">Master Identitas</a></li>						                  
+					</ul>
+				</li>
+				<li><a href="#">Logout</a></li>
+				<div class="clear"></div>			
+			</ul>
+            </div>
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix" />
+				<ul>
+				<li><a href="#">Land Compensation</a>
+					<ul>
+                        <li><a href="../Pages/MasterIdentitas.aspx">&nbsp;&nbsp;&nbsp;-> Master Identitas</a></li>
+						<li><a href="../Pages/1_PraRegistrasi.aspx">&nbsp;&nbsp;&nbsp;-> Pra Registrasi</a></li>
+						<li><a href="../Pages/1_PengecekanLapangan.aspx">&nbsp;&nbsp;&nbsp;-> Pengecekan Lapangan</a></li>
+						<li><a href="../Pages/2_Registrasi.aspx">&nbsp;&nbsp;&nbsp;-> Registrasi&nbsp;&nbsp;</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Visum&nbsp;</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Pengukuran</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Negosiasi</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Pemberkasan I</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Pembayaran</a></li>
+						<li><a href="#">&nbsp;&nbsp;&nbsp;-> Pemberkasan II</a></li>                        
+					</ul>
+				</li>
+				<li><a href="#">Land Secure</a></li>
+				<li><a href="#">Land Inventory</a></li>
+				<li><a href="#">Admin Tools</a>
+					<ul>
+						<li><a href="#">User Management</a></li>
+                        <li><a href="../Pages/MasterIdentitas.aspx">Master Identitas</a></li>						                  
+					</ul>
+				</li>
+				<li><a href="#">Logout</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+
+<form id="form1" runat="server">
+<div>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+    </asp:ContentPlaceHolder>
+</div>
+</form>
+
+
+
+</body>
+</html>
