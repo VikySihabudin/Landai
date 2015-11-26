@@ -18,8 +18,8 @@ using System.DirectoryServices.AccountManagement;
 public class LDAP
 {
     private String domainName = "PTADARO";
-    private String userName = "gisldap";
-    private String password = "Pwdg1sldaplagi+";
+    private String userName = "XXXXX";
+    private String password = "XXXXX";
 
     public LDAP()
     {
@@ -41,8 +41,8 @@ public class LDAP
     public bool UserExists(string username)
     {
         DirectoryEntry de = GetDirectoryEntry();
-        de.Username = "gisldap";
-        de.Password = "Pwdg1sldaplagi+";
+        de.Username = "XXXXX";
+        de.Password = "XXXXX";
         //de.Username = "administrator";
         //de.Password = "general";
         DirectorySearcher deSearch = new DirectorySearcher();
